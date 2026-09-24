@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">MyApp</div>
+    <div class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="profile.html" class="active">Profile</a>
+      <a href="#" id="logout">Logout</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>My Profile</h1>
+    <p class="subtitle">Your account information</p>
+
+    <div class="info-card">
+      <p><strong>Name:</strong> <span id="userName">Loading...</span></p>
+      <p><strong>Email:</strong> <span id="userEmail">Loading...</span></p>
+    </div>
+  </main>
+
+  <script src="auth.js"></script>
+  <script>
+    (async () => {
+      const data = await fetchProfile();
+      if (!data) return;
+
+      document.getElementById("userName").textContent = data.user.name;
+      document.getElementById("userEmail").textContent = data.user.email;
+    })();
+  </script>
+</body>
+</html>
