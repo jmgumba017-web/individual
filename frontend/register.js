@@ -1,4 +1,4 @@
-const API_URL = "https://dbgroup-backend.onrender.com";
+const API_URL = "https://individual-4brh.onrender.com";
 
 const registerForm = document.getElementById("registerForm");
 

@@ -1,6 +1,6 @@
 // Shared authentication logic for all protected pages
 
-const API_URL = "https://dbgroup-backend.onrender.com";
+const API_URL = "https://individual-4brh.onrender.com";
 
 // Check if user is logged in — redirect to login if not
 function requireAuth() {
